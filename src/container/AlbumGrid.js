@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import Album from '../component/Album';
+import { Row } from 'reactstrap';
 
 export default class AlbumGrid extends Component {
   render() {
     return (
       <div>
+        <Row>
         <h2>Top Album</h2>
         <div>
-          <a class="station" href="#">
+          <a class="station text-right" href="#">
             Start Station
           </a>
         </div>
+        </Row>
+        
         <section id="albums">
+        <Row>
           <Album
             image="img/album/album_01.png"
             nom="Native (Deluxe)"
@@ -72,6 +77,7 @@ export default class AlbumGrid extends Component {
             artist="The National"
             song={13}
           />
+          </Row>
         </section>
       </div>
     );
