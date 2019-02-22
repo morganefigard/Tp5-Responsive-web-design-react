@@ -3,6 +3,7 @@ import Header from './container/Header';
 import SideMenu from './container/SideMenu';
 import Artist from './component/Artist';
 import AlbumGrid from './container/AlbumGrid';
+import { Container } from 'reactstrap';
 
 import './App.css';
 
@@ -11,11 +12,13 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <Container>
         <SideMenu />
         <main>
           <Artist />
           <AlbumGrid />
         </main>
+        </Container>
       </div>
     );
   }
