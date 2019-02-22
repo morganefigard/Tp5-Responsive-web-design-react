@@ -3,7 +3,7 @@ import Header from './container/Header';
 import SideMenu from './container/SideMenu';
 import Artist from './component/Artist';
 import AlbumGrid from './container/AlbumGrid';
-import { Container } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 import './App.css';
 
@@ -13,11 +13,17 @@ class App extends Component {
       <div>
         <Header />
         <Container>
-        <SideMenu />
-        <main>
-          <Artist />
-          <AlbumGrid />
-        </main>
+          <Row>
+            <Col lg="2">
+              <SideMenu />
+            </Col>
+            <Col lg="10">
+              <main>
+                <Artist />
+                <AlbumGrid />
+              </main>
+            </Col>
+          </Row>
         </Container>
       </div>
     );
